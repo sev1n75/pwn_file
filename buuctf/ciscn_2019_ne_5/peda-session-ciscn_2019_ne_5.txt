@@ -1,0 +1,16 @@
+break *0x080488e7
+disable $bpnum
+break *0x0000000008048636
+disable $bpnum
+break printf
+disable $bpnum
+break *0x8048801
+disable $bpnum
+break *0x8048670
+disable $bpnum
+break GetFlag
+disable $bpnum
+break *0x80488bc
+disable $bpnum
+break *0x0000000008048721
+

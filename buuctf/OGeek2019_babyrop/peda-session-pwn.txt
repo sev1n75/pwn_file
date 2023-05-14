@@ -1,0 +1,7 @@
+break *0x08048825
+break *0x0804875A
+break *0x08048862
+break *0x80487be
+break *0x80487ff
+break *0x0000000008048824
+

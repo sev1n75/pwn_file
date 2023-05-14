@@ -1,0 +1,15 @@
+# method 1
+while :; do ./toctou num; done 2>/dev/null
+
+while :; do echo 0 >num; done
+
+while :; do echo 1 >num; done
+
+# method 2
+## proccess 1
+while :; do ./toctou num; done 2>/dev/null
+
+## proccess 2
+while :; do ./toctou num; done 2>/dev/null
+
+while :; do echo 0 >num; done

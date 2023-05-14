@@ -1,0 +1,3 @@
+break printf
+break __isoc99_scanf
+

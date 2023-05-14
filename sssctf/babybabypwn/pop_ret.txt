@@ -1,0 +1,15 @@
+Gadgets information
+============================================================
+0x0000000000001464 : pop r12 ; pop r13 ; pop r14 ; pop r15 ; ret
+0x0000000000001466 : pop r13 ; pop r14 ; pop r15 ; ret
+0x0000000000001468 : pop r14 ; pop r15 ; ret
+0x000000000000146a : pop r15 ; ret
+0x0000000000001463 : pop rbp ; pop r12 ; pop r13 ; pop r14 ; pop r15 ; ret
+0x0000000000001467 : pop rbp ; pop r14 ; pop r15 ; ret
+0x000000000000119f : pop rbp ; ret
+0x000000000000146b : pop rdi ; ret
+0x0000000000001469 : pop rsi ; pop r15 ; ret
+0x0000000000001465 : pop rsp ; pop r13 ; pop r14 ; pop r15 ; ret
+0x0000000000001016 : ret
+
+Unique gadgets found: 11

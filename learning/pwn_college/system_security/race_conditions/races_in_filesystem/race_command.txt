@@ -1,0 +1,8 @@
+# race to change asdf
+while :;do cp -v catflag asdf; done
+
+# excute 2000 times and write results to output
+for i in $(seq 1 2000); do ./fs1 asdf; done | tee output
+
+# count times of win timmes
+sort output | uniq -c

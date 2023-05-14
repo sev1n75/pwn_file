@@ -1,0 +1,6 @@
+break buy
+break *0x400d2a
+break *0x400c8f
+break *0x400d1b
+break *0x400bfb
+

@@ -1,0 +1,4 @@
+break vulnerable
+break *0x0000000000400948
+break *0x4006c1
+
