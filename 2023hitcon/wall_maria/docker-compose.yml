@@ -1,0 +1,11 @@
+version: "3"
+services:
+  maria:
+    build: .
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - "30002:30002"
+      - "1234:1234"
+    expose:
+      - "30002"
