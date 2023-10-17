@@ -1,4 +1,4 @@
-# Wall-Maria
+# Wall-Sina
 
 栈上有 `_dl_global->link_map` 的地址，类似`house_of_banana`，由于给了`main_addr`在 `fini_arry`后面
 
@@ -16,5 +16,5 @@
 
   <img alt="图 2" src="images/image-20230915114338.png" />  
 
-**注意:**和 qemu 交互有 tty 问题，可以参考 SECCON2023-umemo 中 `mephi42`师傅的 wp <a href="https://ctftime.org/writeup/37933">此链接</a>
+注意: 和 qemu 交互有 tty 问题，可以参考 SECCON2023-umemo 中 `mephi42` 师傅的 wp <a href="https://ctftime.org/writeup/37933">此链接</a>
 
