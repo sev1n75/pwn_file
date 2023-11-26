@@ -16,7 +16,7 @@
 
 - scanf 在输入过长时(如len=0x400) 会调用 malloc(0x800) 然后 free
 
-  - 所以可以通过scanf 分配大 chunk，调用`malloc_consolidate` 在 largebin 填一个 chunk
+  - 所以可以通过scanf 分配大 chunk，调用`malloc_consolidate` 在 smallbin 填一个 chunk
   - 然后申请回来剩一个0x100
   - `malloc_consolidate` 在向下合并时没有检查，直接判断
 
@@ -43,7 +43,7 @@
     ----------------------------
     0x100 off by oned in unsortedbin
     ----------------------------
-    paddings
+    padding
     ----------------------------
     top
     ----------------------------
@@ -53,21 +53,21 @@
     ----------------------------
     0x61 * 7 in tcache
     ----------------------------
+    paddings
+    ----------------------------
     0xc1
     victim in fastbin and chunk A merged
-    in unsorted bin then in largebin
+    in unsorted bin then in smallbin 
     ----------------------------
     0x100 off by oned in smallbin
     ----------------------------
-    paddings 0x81 * 7
-    ----------------------------
-    fake fastbins to be reversed into tcache
+    padding 
     ----------------------------
     top
     ----------------------------
     ```
 
-- 此后mallo(0x40) malloc(0x80)即可
+- 此后mallo(0x38) malloc(0x78)即可
 
 - 然后 tcache poisoning 劫持 tcache struct
 
